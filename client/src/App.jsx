@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Suspense } from "react";
-import { Home } from '../../routes/Routes';
+import { Home } from './routes/Routes';
 import Navbar  from './layouts/Navbar';
 import Hero from './layouts/Hero';
 import Footer from './layouts/Footer';
