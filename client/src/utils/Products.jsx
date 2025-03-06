@@ -6,14 +6,14 @@ const Products = () => {
   return (
     <>
     <main className='container mx-auto my-8'>
-      <div className='grid lg:grid-cols-3 lg:gap-y-[54px] lg:gap-x-[15px] gap-[44.46px]'>
+      <div className='grid md:grid-cols-2 lg:grid-cols-3 lg:gap-y-[54px] lg:gap-x-[15px] gap-[44.46px] md:w-full'>
         {productSections.map((productSection) => {
           const {
             _id, image, title,ratingicon, rating, price, duration,
           } = productSection;
           return(
             <div key={productSection._id}>
-              <div className="card bg-[#aeaea7] p-3 w-67 mx-auto shadow-sm">
+              <div className="card bg-[#252422] text-[#FBFBFB] p-3 w-full mx-auto shadow-sm">
   <figure>
     <img
       src={image}
@@ -30,12 +30,12 @@ const Products = () => {
       </figure>
     </div>
     {/* div for price & and duration  */}
-        <div className='flex justify-between items-center'>
-      <h3 className='text-[#B67B0F]'>&#8358; {price}</h3>
-      <p className='text-[#FBFBFB]'>{duration}</p>
+        <div className='flex place-items-center justify-between'>
+      <h3 className='text-[#B67B0F] text-[31px] lg:whitespace-nowrap'><span className='text-[15px]'>&#8358;</span> {price}</h3>
+      <h5 className='text-[#FBFBFB] text-[16px] lg:whitespace-nowrap'>{duration}</h5>
     </div>
     <div className="card-actions justify-end">
-      <button className="btn btn-primary">Add to Cart</button>
+      <button className=" bg-[#B67B0F] leading-[100%] w-full rounded-[31px] lg:whitespace-nowrap py-[15px] px-[56px] md:text-base">Add to Cart</button>
     </div>
   </div>
 </div>
