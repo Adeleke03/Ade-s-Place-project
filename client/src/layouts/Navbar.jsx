@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import cartIcon from "../assets/cart-icon.svg";
 import profileIcon from "../assets/profile-icon.svg";
 import LocationDropDownFN from "../utils/Dropdown";
+import AuthBtn from "../components/AuthBtn";
 const Navbar = () => {
   return (
     <main>
@@ -54,12 +55,8 @@ const Navbar = () => {
                     <span className="hidden md:inline-block ">Cart</span> 00{" "}
                   </Link>
                 </li>
-                <li className="flex items-center gap-2 bg-[#F0F0F0] md:rounded-[32px] rounded-full text-black py-[11px] px-[15px] md:w-[124px] w-[50px] h-[50px]">
-                  <img src={profileIcon} alt="loginLogo" />
-                  <Link>
-                    {" "}
-                    <span className="hidden md:block text-[13px]">Login</span>
-                  </Link>
+                <li className="flex items-center gap-2 bg-[#F0F0F0] md:rounded-[32px] rounded-full text-black py-[11px] px-[15px] md:w-[124px] w-[50px] h-[50px]"><AuthBtn/>
+
                 </li>
               </ul>
           </div>
