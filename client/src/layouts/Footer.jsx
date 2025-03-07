@@ -10,7 +10,7 @@ const Footer = () => {
       {/* section-1 for footer */}
       <section className='flex justify-between h-[159px] items-center'>
         {/* div for logo */}
-        <div>
+        <div className='bg-[#B67B0F] py-[10px] px-[14px] rounded-[6px]'>
           <img src={footerLogo} alt="" />
         </div>
         {/* div for About, Products, Support & Terms & Condition */}
