@@ -8,6 +8,7 @@ import Footer from "./layouts/Footer";
 import LoadingRing from "./utils/Loader";
 import SignIn from "./auth/SignIn";
 import SignUp from "./auth/Signup";
+import Hero from "./layouts/Hero";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           }
         >
           <Navbar />
+          <Hero/>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/auth/sign-in" element={<SignIn />} />
