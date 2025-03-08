@@ -26,12 +26,13 @@ const SignUp = () => {
 
   return (
     <>
-      <main className="bg-[#100101] ">
+    
+      <div className="bg-[#100101] ">
         {/* Sign up Section */}
         <section className="wrapper">
           {/* logo div for sign up section */}
           <div className="flex justify-center py-8">
-            <img src={navLogo} alt="" />
+            <img className="h-[127.8px]" src={navLogo} alt="" />
           </div>
           {/* div for sign up form */}
           <form onSubmit={handleSubmit(onSubmit)}>
@@ -41,7 +42,8 @@ const SignUp = () => {
             <h4 className="text-white text-base">
               Let's get you started so you can start joining and creating events
             </h4>
-            {/* div for email,fullname,password,confirm password */}
+            {/* div for email,fullname,password,confirm password.
+            I changed full name to first name and last name because @ login "Hi Eggy" is a single name & the space can't also contain  full name */}
             <div className="flex flex-col">
               {/* div for email */}
               <div className="py-2">
@@ -62,21 +64,38 @@ const SignUp = () => {
               </div>
               {/* div for fullname  */}
               <div className="py-2">
-                {/* label for full name */}
-                <label htmlFor="fullName" className="text-white">
-                  Full Name :
+                {/* label for first name */}
+                <label htmlFor="firstName" className="text-white">
+                  First Name :
                 </label>
                 <input
                   className="w-full h-[49px] rounded-[6px] bg-[#201F1E] p-[16px] text-white placeholder:text-[#c7c3c3]"
                   type="text"
-                  name="fullName"
-                  autoComplete="name"
-                  id="fullName"
-                  placeholder="Full Name"
-                  {...register("fullName")}
+                  name="firstName"
+                  autoComplete="given-name"
+                  id="firstName"
+                  placeholder="First Name"
+                  {...register("firstName")}
                 />
               </div>
-              <p className="text-red-600">{errors.fullName?.message}</p>
+              <p className="text-red-600">{errors.firstName?.message}</p>
+              {/* div for last name  */}
+              <div className="py-2">
+                {/* label for last name */}
+                <label htmlFor="lastName" className="text-white">
+                  Last Name :
+                </label>
+                <input
+                  className="w-full h-[49px] rounded-[6px] bg-[#201F1E] p-[16px] text-white placeholder:text-[#c7c3c3]"
+                  type="text"
+                  name="lastName"
+                  autoComplete="family-name"
+                  id="lastName"
+                  placeholder="Last Name"
+                  {...register("lastName")}
+                />
+              </div>
+              <p className="text-red-600">{errors.lastName?.message}</p>
               {/* div for password */}
               <div className="py-2 relative">
                 {/* label for password */}
@@ -96,6 +115,7 @@ const SignUp = () => {
                   onClick={() => setShowPassword(!showPassword)}
                   type="button"
                   className=""
+                  aria-label="Toggle password visibility"
                 >
                   <img
                     className="absolute right-3 bottom-5"
@@ -124,6 +144,7 @@ const SignUp = () => {
                   onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                   type="button"
                   className=""
+                  aria-label="Toggle Confirm Password visibility"
                 >
                   <img
                     className="absolute right-3 bottom-5"
@@ -156,11 +177,11 @@ const SignUp = () => {
               >
                 Sign Up
               </button>
-              <p className="text-white py-1.5 text-[20px] font-[700]">Already have an account? <Link to="/auth/sign-in"><span className="text-[#B67B0F] font-[700] text-[20px]"> Sign In</span></Link></p>
+              <p className="text-white py-1.5 text-[20px] font-[700]">Already have an account? <Link ><span className="text-[#B67B0F] font-[700] text-[20px]"> Sign In</span></Link></p>
             </div>
           </form>
         </section>
-      </main>
+      </div>
     </>
   );
 };

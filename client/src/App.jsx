@@ -6,8 +6,8 @@ import { Home } from "./routes/routes";
 import Navbar from "./layouts/Navbar";
 import Footer from "./layouts/Footer";
 import LoadingRing from "./utils/Loader";
-import SignIn from "./auth/SignIn";
-import SignUp from "./auth/Signup";
+import SignIn from "./components/SignIn";
+import SignUp from "./components/Signup";
 import Hero from "./layouts/Hero";
 
 function App() {
@@ -25,8 +25,7 @@ function App() {
           <Hero/>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/auth/sign-in" element={<SignIn />} />
-            <Route path="/auth/sign-up" element={<SignUp />} />
+            <Route element={<SignUp />} />
           </Routes>
           <Footer />
         </Suspense>

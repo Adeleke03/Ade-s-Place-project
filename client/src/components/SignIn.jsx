@@ -8,6 +8,7 @@ import * as yup from "yup";
 import navLogo from "../assets/nav-logo.svg";
 import visibilityon from "../assets/visibilityon.svg";
 import visibilityoff from "../assets/visibilityoff.svg";
+import SignUp from "./Signup";
 
 const SignIn = () => {
   const {
@@ -21,7 +22,7 @@ const SignIn = () => {
 
   return (
     <>
-      <main className="bg-[#100101]">
+      <div className="bg-[#100101]">
         {/* Sign in Section */}
         <section className="wrapper">
           {/* logo div for sign up section */}
@@ -97,18 +98,33 @@ const SignIn = () => {
                 Sign In
               </button>
               <p className="text-white py-1.5 text-[20px] font-[700]">
-                Don't have an account?{" "}
-                <Link to="/auth/sign-up">
-                  <span className="text-[#B67B0F] font-[700] text-[20px]">
-                    {" "}
-                    Sign Up
-                  </span>
-                </Link>
+                Don't have an account?{" "}{/* You can open the modal using document.getElementById('ID').showModal() method */}
+                <button
+  type="button"  // Ensure it's not treated as a submit button
+  className="btn text-[#B67B0F] font-[700] text-[20px]"
+  onClick={(e) => {
+    e.preventDefault(); // Prevent unintended form submission
+    console.log("Opening modal...");
+    document.getElementById("my_modal_3").showModal();
+  }}
+>
+  Sign Up
+</button>
+<dialog id="my_modal_3" className="modal">
+  <div className="modal-box">
+    <form method="dialog">
+      {/* if there is a button in form, it will close the modal */}
+      <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+    </form>
+    <SignUp/>
+  </div>
+</dialog>
+
               </p>
             </div>
           </form>
         </section>
-      </main>
+      </div>
     </>
   );
 };
