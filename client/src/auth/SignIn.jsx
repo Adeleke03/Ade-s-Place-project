@@ -6,20 +6,18 @@ import { signUpSchema } from "../utils/ValidationSchema";
 import { Link } from "react-router-dom";
 import * as yup from "yup";
 import navLogo from "../assets/nav-logo.svg";
-import visibilityon from  "../assets/visibilityon.svg"
+import visibilityon from "../assets/visibilityon.svg";
 import visibilityoff from "../assets/visibilityoff.svg";
 
 const SignIn = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isValid },
   } = useForm({ resolver: yupResolver(signInSchema) });
   const onSubmit = (data) => console.log(data);
 
-  const [showPassword, setShowPassword] = useState(false)
-
-
+  const [showPassword, setShowPassword] = useState(false);
 
   return (
     <>
@@ -32,7 +30,9 @@ const SignIn = () => {
           </div>
           {/* div for sign in form  */}
           <form onSubmit={handleSubmit(onSubmit)}>
-            <h2 className="text-white text-[32px] leading-[100%] py-1.5">Welcome Back</h2>
+            <h2 className="text-white text-[32px] leading-[100%] py-1.5">
+              Welcome Back
+            </h2>
             <h4 className="text-white text-base">Sign In to Your Account</h4>
             {/* div for email&password  */}
             <div className="flex flex-col">
@@ -44,9 +44,10 @@ const SignIn = () => {
                 </label>
                 <input
                   placeholder="Email"
+                  autoComplete="email"
                   className="w-full h-[49px] rounded-[6px] bg-[#201F1E] p-[16px] text-white placeholder:text-[#c7c3c3]"
                   type="email"
-                  name=""
+                  name="email"
                   id="email"
                   {...register("email")}
                 />
@@ -60,10 +61,11 @@ const SignIn = () => {
                 </label>
                 <input
                   placeholder="Password"
+                  autoComplete="current-password"
                   className="w-full h-[49px] rounded-[6px] bg-[#201F1E] p-[16px] text-white placeholder:text-[#c7c3c3]"
                   type={showPassword ? "text" : "password"}
-                  name=""
-                  id=""
+                  name="password"
+                  id="password"
                   {...register("password")}
                 />
                 <button
@@ -73,18 +75,36 @@ const SignIn = () => {
                 >
                   <img
                     className="absolute right-3 bottom-4"
-                    src={showPassword ? visibilityoff : visibilityon}
-                    alt=""
+                    src={showPassword ? visibilityon : visibilityoff}
+                    alt="Toggle password visibility"
                   />
                 </button>
               </div>
               <p className="text-red-600">{errors.password?.message}</p>
             </div>
-              <p className="text-white pb-4 underline">Forgot Password?</p>
+            <p className="text-white pb-4 underline">Forgot Password?</p>
             {/* div for sign  in button */}
             <div className="py-4">
-              <button className="bg-[#B67B0F] py-[15px] px-[56px] rounded-[31px] w-full text-white">Sign In</button>
-              <p className="text-white py-1.5">Don't have an account? <span className="text-[#B67B0F]">Sign Up</span></p>
+              <button
+              type="submit"
+              disabled={!isValid}
+                className={`w-full py-[15px] px-[56px] rounded-[31px] text-white text-[20px] font-bold ${
+                  isValid
+                    ? "bg-[#B67B0F] hover:bg-[#a56d0d]"
+                    : "bg-gray-500 cursor-not-allowed"
+                }`}
+              >
+                Sign In
+              </button>
+              <p className="text-white py-1.5 text-[20px] font-[700]">
+                Don't have an account?{" "}
+                <Link to="/auth/sign-up">
+                  <span className="text-[#B67B0F] font-[700] text-[20px]">
+                    {" "}
+                    Sign Up
+                  </span>
+                </Link>
+              </p>
             </div>
           </form>
         </section>
