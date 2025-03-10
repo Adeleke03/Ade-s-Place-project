@@ -8,6 +8,7 @@ import Navbar from "./layouts/Navbar";
 import Footer from "./layouts/Footer";
 import LoadingRing from "./utils/Loader";
 import Hero from "./layouts/Hero";
+import Cart from "./pages/Cart";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           {/* <Hero/> */}
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="pages/Cart" element={<Cart/>}/>
           </Routes>
           <Footer />
         </Suspense>

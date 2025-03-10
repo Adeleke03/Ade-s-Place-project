@@ -5,6 +5,7 @@ import cartIcon from "../assets/cart-icon.svg";
 import LocationDropDownFN from "../utils/Dropdown";
 import SignInOut from "../auth/SignInOut";
 import Searchbar from "../utils/Searchbar";
+import Cart from "../pages/Cart";
 
 
 const Navbar = () => {
@@ -33,7 +34,7 @@ const Navbar = () => {
               All Products
             </h2> */}
             <ul className="flex gap-[28px]">
-                <Link >
+                <Link to="../pages/Cart">
               <li className="flex gap-2 bg-[#B67B0F] md:rounded-[32px] rounded-full py-[15px] px-[20px] md:w-[142px] w-[80px] h-[50px]">
                 <img src={cartIcon} alt="cartLogo" />
                   <span className="hidden md:inline-block">Cart</span> 00
