@@ -1,37 +1,86 @@
-import React from "react";
-import searchBar from "../assets/searchBar-icon.svg";
-import search from "../assets/search.svg";
-import Productsection from "../utils/Productsection";
+import React,{useState} from 'react';
 import Searchbar from "../utils/Searchbar";
-import Products from "../utils/Products";
+import Productsection from "../utils/Productsection";
 
 const Home = () => {
   return (
     <>
-      <main className="bg-[#2F2F2F]">
-        {/* Homepage Article */}
-        <article className="wrapper">
-          {/* Homepage  Article Section 1  */}
+    <section className=" bg-[#2F2F2F]">
+      <div className='wrapper'>
+        {/* div for search bar  */}
+        <div className='lg:hidden py-6'>
 
-          <section>
-            {/* searchbar div */}
-            <div>
-              <Searchbar />
-            </div>
+        {<Searchbar/>}
+        </div>
+        {/* div for product section */}
+        <div>
+          {<Productsection/>}
+        </div>
 
-            {/* Products div */}
-            <div>
-              <Productsection />
-            </div>
-          </section>
-          {/*Homepage Article Section 2  */}
-          <section>
-            <Products/>
-          </section>
-        </article>
-      </main>
+      </div>
+
+    </section>
+
+      
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { useState } from "react";
+// import Productsection from "../utils/Productsection";
+// import { burger, combos, chickens, drinks, chips, salads, allProducts } from "../utils/Product";
+
+// const Home = () => {
+//   const [selectedCategory, setSelectedCategory] = useState(cheese);
+
+//   return (
+//     <>
+//       <main className="bg-[#2F2F2F]">
+//         <article className="wrapper">
+//           {/* Searchbar */}
+//           <div className="lg:hidden py-6">
+//             <Searchbar />
+//           </div>
+
+//           {/* Category Buttons */}
+//           <div className="flex gap-4 justify-center py-4">
+//             <button className="bg-white text-black px-4 py-2 rounded" onClick={() => setSelectedCategory(burger)}>Burgers</button>
+//             <button className="bg-white text-black px-4 py-2 rounded" onClick={() => setSelectedCategory(combos)}>Combos</button>
+//             <button className="bg-white text-black px-4 py-2 rounded" onClick={() => setSelectedCategory(chickens)}>Chicken</button>
+//             <button className="bg-white text-black px-4 py-2 rounded" onClick={() => setSelectedCategory(drinks)}>Drinks</button>
+//             <button className="bg-white text-black px-4 py-2 rounded" onClick={() => setSelectedCategory(chips)}>Chips</button>
+//             <button className="bg-white text-black px-4 py-2 rounded" onClick={() => setSelectedCategory(salads)}>Salads</button>
+//             <button className="bg-white text-black px-4 py-2 rounded" onClick={() => setSelectedCategory(allProducts)}>All</button>
+//           </div>
+
+//           {/* Product Section */}
+//           <section>
+//             <Productsection />
+//           </section>
+
+//           {/* Product Display */}
+//           <section>
+//             <Products items={selectedCategory} />
+//           </section>
+//         </article>
+//       </main>
+//     </>
+//   );
+// };
+
+// export default Home;

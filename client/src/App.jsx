@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -6,8 +7,6 @@ import { Home } from "./routes/routes";
 import Navbar from "./layouts/Navbar";
 import Footer from "./layouts/Footer";
 import LoadingRing from "./utils/Loader";
-import SignIn from "./components/SignIn";
-import SignUp from "./components/Signup";
 import Hero from "./layouts/Hero";
 
 function App() {
@@ -25,7 +24,6 @@ function App() {
           <Hero/>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route element={<SignUp />} />
           </Routes>
           <Footer />
         </Suspense>

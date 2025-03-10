@@ -4,12 +4,12 @@ import "../App.css";
 const Hero = () => {
   return (
     <>
-      <main className="bg-[url(https://res.cloudinary.com/diww44oar/image/upload/v1741087297/Frame-_Hero_aermab.svg)] 
-        bg-no-repeat bg-cover bg-center w-full h-[300px] lg:h-[600px] flex justify-center items-center opacity-93">
-        
+      <main
+        className="bg-[url(https://res.cloudinary.com/diww44oar/image/upload/v1741087297/Frame-_Hero_aermab.svg)] 
+        bg-no-repeat bg-cover bg-center w-full h-[300px] lg:h-[600px] flex justify-center items-center opacity-93"
+      >
         {/* section */}
         <section className="w-[700px] flex flex-col items-center text-center gap-[40px]">
-          
           {/* div for context */}
           <div className="p-2 lg:p-0">
             <h1 className="text-white whitespace-pre-wrap lg:text-[56px] text-[50px] font-[500] lg:tracking-[7%] md:leading-[74.09px]">

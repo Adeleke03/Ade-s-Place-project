@@ -4,7 +4,7 @@ const Searchbar = () => {
   return (
     <div>
       {/* form input for search bar  */}
-      <form className='lg:hidden py-6'>
+      <form >
               <input
                 type="text"
                 name=""
