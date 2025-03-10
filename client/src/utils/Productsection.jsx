@@ -102,8 +102,7 @@ const Productsection = () => {
   {/* card body div */}
   <div className="card-body">
     {/* div  for title and rating icon  */}
-    <div className='flex jus
-    tify-between'>
+    <div className='flex justify-between'>
 
     <h2 className="card-title text-[20px] font-[500] leading-[100%]">{title}</h2>
       <figure className='border-[1px] border-[#B67B0F] rounded-[6px] py-[6px] px-[4px]'>
