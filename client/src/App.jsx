@@ -21,7 +21,7 @@ function App() {
           }
         >
           <Navbar />
-          <Hero/>
+          {/* <Hero/> */}
           <Routes>
             <Route path="/" element={<Home />} />
           </Routes>

@@ -1,11 +1,17 @@
 import React,{useState} from 'react';
 import Searchbar from "../utils/Searchbar";
 import Productsection from "../utils/Productsection";
+import Hero from '../layouts/Hero';
 
 const Home = () => {
   return (
     <>
     <section className=" bg-[#2F2F2F]">
+        {/* div for Hero dispay */}
+        <div>
+          {<Hero/>}
+
+        </div>
       <div className='wrapper'>
         {/* div for search bar  */}
         <div className='lg:hidden py-6'>
