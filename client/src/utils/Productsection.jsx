@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useParams } from "react-router-dom";
+import {Link} from "react-router-dom";
 import {
   burgers,
   combos,
@@ -7,10 +9,11 @@ import {
   chips,
   salads,
   allProducts,
+ 
 } from "../product";
 
 const Productsection = () => {
-  const [selectedCategorys, setSelectedCategory] = useState(allProducts);
+  const [selectedCategorys, setSelectedCategory] = useState(burgers);
   return (
     <>
       <main className="">
@@ -94,11 +97,13 @@ const Productsection = () => {
                 return(
                   <div key={products._id}>
                     <div className="card bg-[#252422] text-[#FBFBFB] p-3 w-full mx-auto shadow-sm">
+                      <Link to={`/products/${_id}`}>
                     <figure>
     <img
       src={image}
       alt={title} />
   </figure>
+  </Link>
   {/* card body div */}
   <div className="card-body">
     {/* div  for title and rating icon  */}
@@ -110,6 +115,7 @@ const Productsection = () => {
         <figcaption>{rating}</figcaption>
       </figure>
     </div>
+    
     {/* div for price & and duration  */}
     <div className='flex place-items-center justify-between'>
       <h3 className='text-[#B67B0F] text-[31px] lg:whitespace-nowrap'><span className='text-[15px]'>&#8358;</span> {price}</h3>

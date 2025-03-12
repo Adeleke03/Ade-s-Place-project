@@ -9,6 +9,7 @@ import Footer from "./layouts/Footer";
 import LoadingRing from "./utils/Loader";
 import Hero from "./layouts/Hero";
 import Cart from "./pages/Cart";
+import ProductDetails from "./pages/ProductDetails";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           {/* <Hero/> */}
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/products/:id" element={<ProductDetails />} />
             <Route path="pages/Cart" element={<Cart/>}/>
           </Routes>
           <Footer />
