@@ -56,7 +56,7 @@ export const burgers = [
     price: "10,000",
     duration: "15-20mins",
   },
-  ,
+  
   {
     _id: 5,
     image:

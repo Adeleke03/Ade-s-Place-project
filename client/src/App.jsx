@@ -56,7 +56,7 @@ function App() {
           {/* <Hero/> */}
           <Routes>
             <Route path="/" element={<Home handleAddToCart = {handleAddToCart} />} />
-            <Route path="/products/:id" element={<ProductDetails />} />
+            <Route path="/products/:id"  element={<ProductDetails  />} />
             <Route path="Cart" element={<Cart cart={cart} setCart={setCart} />}/>
           </Routes>
           <Footer />
