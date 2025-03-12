@@ -8,11 +8,13 @@ import {
   chickens,
   chips,
   salads,
-  allProducts,
+  
  
 } from "../product";
+import {  toast } from 'sonner';
 
-const Productsection = () => {
+
+const Productsection = ({handleAddToCart}) => {
   const [selectedCategorys, setSelectedCategory] = useState(burgers);
   return (
     <>
@@ -123,7 +125,7 @@ const Productsection = () => {
     </div>
     {/* Add to Cart Div */}
     <div className="card-actions justify-end">
-      <button className=" bg-[#B67B0F] leading-[100%] w-full rounded-[31px] lg:whitespace-nowrap py-[15px] px-[56px] md:text-base">Add to Cart</button>
+      <button className=" bg-[#B67B0F] leading-[100%] w-full rounded-[31px] lg:whitespace-nowrap py-[15px] px-[56px] md:text-base" onClick={() => {handleAddToCart(products), toast('An item added to Cart')}}>Add to Cart</button>
     </div>
 
   </div>

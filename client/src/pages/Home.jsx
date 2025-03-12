@@ -3,7 +3,7 @@ import Searchbar from "../utils/Searchbar";
 import Productsection from "../utils/Productsection";
 import Hero from '../layouts/Hero';
 
-const Home = () => {
+const Home = ({handleAddToCart}) => {
   return (
     <>
     <section className=" bg-[#2F2F2F]">
@@ -20,7 +20,7 @@ const Home = () => {
         </div>
         {/* div for product section */}
         <div>
-          {<Productsection/>}
+          {<Productsection handleAddToCart= {handleAddToCart} />}
         </div>
 
       </div>
