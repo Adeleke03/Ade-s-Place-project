@@ -1,16 +1,29 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { useParams } from "react-router-dom";
-import {  menuProducts  } from "../product";
+import {  burgers,
+  combos,
+  drinks,
+  chickens,
+  chips,
+  salads,  } from "../product";
 
 const ProductDetails = () => {
+  const [selectedCategorys, setSelectedCategory] = useState([
+    burgers, 
+    combos, 
+    drinks, 
+    chickens,  
+    chips, 
+    salads
+  ].flat());
   const { id } = useParams();
-  const products = menuProducts.find((item) => item._id == id);
-  const relatedProducts = menuProducts.filter((item) => item._id !== id).slice(10, 14);
+  const products = selectedCategorys.find((item) => item._id == id);
+  const relatedProducts = selectedCategorys.filter((item) => item._id !== id).slice(10, 14);
   return (
     <>
-      <main className='container mx-auto px-4 md:px-16 py-6 bg-[#2F2F2F] text-white'>
+      <main className='mx-auto px-4 md:px-16 py-6 bg-[#2F2F2F] text-white'>
         {/* section-1  */}
-        <section className='grid grid-cols-1 md:grid-cols-2 gap-8 items-center'>
+        <section className='wrapper  grid grid-cols-1 md:grid-cols-2 gap-8 items-center'>
           {/* Product Image */}
           <div>
                     <img src={products.image} alt={products.title} className='rounded-lg w-full max-w-md mx-auto' />
@@ -23,7 +36,7 @@ const ProductDetails = () => {
 
         </section>
          {/* Related Products */}
-         <section className='mt-12'>
+         <section className='wrapper'>
                 <h2 className='text-2xl font-semibold mb-6'>Others You Might Like</h2>
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
                     {relatedProducts.map((item) => (

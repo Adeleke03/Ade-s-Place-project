@@ -9,6 +9,25 @@ const Cart = ({ cart, setCart }) => {
     console.log(333);
     
     setCart(remove);}
+    let handleInc = (productId)=>{
+      const incQty = cart.map((cartItx)=>cartItx._id === productId ? {...cartItx,quantity:cartItx.quantity + 1} : cartItx )
+     
+      setCart(incQty)
+  }
+
+  let handleDec = function(itemId){
+       const decQty =cart.map((cartItx)=>{
+        if(cartItx._id === itemId){
+          const qty = cartItx.quantity > 1 ? cartItx.quantity -1 : 1;
+          return{...cartItx,quantity:qty}
+        }
+        return cartItx;
+       })
+       setCart(decQty)
+  }
+
+  // total price
+  const totalPrice = cart.reduce((total,product)=> total + parseFloat(product.price) * product.quantity, 0)
   return (
     <>
     <div className='bg-[#2F2F2F] text-white'>
@@ -30,6 +49,8 @@ const Cart = ({ cart, setCart }) => {
             rating,
             price,
             duration,
+            quantity,
+
           } = cartItem;
           return(
             <div key={cartItem._id}>
@@ -53,9 +74,9 @@ const Cart = ({ cart, setCart }) => {
       <figure className='cursor-pointer ' onClick={() => handleRemove(_id)}><img src={Vectordelete} alt="delete button" /></figure>
       {/* div for quantity */}
       <div className='flex'>
-        <button className='bg-[#B67B0F] rounded-full outline-none btn border-none text-white'>+</button>
-        <p className='px-3'>1</p>
-        <button className='bg-[#B67B0F] rounded-full outline-none btn border-none text-white'>-</button>
+        <button onClick={() => handleInc(_id)} className='bg-[#B67B0F] rounded-full outline-none btn border-none text-white'>+</button>
+        <p className='px-3'>{quantity}</p>
+        <button onClick={() => handleDec(_id)} className='bg-[#B67B0F] rounded-full outline-none btn border-none text-white'>-</button>
       </div>
 
       
@@ -76,7 +97,7 @@ const Cart = ({ cart, setCart }) => {
           <div className="bg-[#252422] rounded-[8px] py-3">
              {/* div for product total */}
              <div className="flex justify-between p-[10px]">
-                  <h3 className="text-white text-[18px]">Product Total(2)</h3>
+                  <h3 className="text-white text-[18px]">Product Total{(cart.length)}</h3>
                   <p className="text-[#B67B0F] text-[18px]">&#8358; 20,000</p>
                 </div>
                   {/* div for vat */}

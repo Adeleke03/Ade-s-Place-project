@@ -9,6 +9,7 @@ import {
   chips,
   salads,
   
+  
  
 } from "../product";
 import {  toast } from 'sonner';
@@ -99,7 +100,7 @@ const Productsection = ({handleAddToCart}) => {
                 return(
                   <div key={products._id}>
                     <div className="card bg-[#252422] text-[#FBFBFB] p-3 w-full mx-auto shadow-sm">
-                      <Link to={`/products/${_id}`} state={{ selectedCategorys }}>
+                      <Link to={`/products/${_id}`} >
                     <figure>
     <img
       src={image}
