@@ -1,8 +1,10 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { burgers, combos, drinks, chickens, chips, salads } from "../product";
 import Vectordelete from "../assets/Vector.png";
+import CartContext from '../context/CartContext';
 
-const Cart = ({ cart, setCart }) => {
+const Cart = () => {
+  const {cart, setCart} = useContext(CartContext)
   console.log(cart);
   function handleRemove(cartId) {
     let remove = cart.filter((cartItem) => cartItem._id !== cartId);
@@ -91,19 +93,19 @@ const Cart = ({ cart, setCart }) => {
 
         </div>
         {/* div for summary  */}
-        <div className='rounded-[10px] bg-black p-[15px]'>
+        <div className='rounded-[10px] bg-black p-[15px] h-fit '>
           <h2 className='text-[24px] leading-[100%] text-white py-4'>Summary</h2>
           {/* div for summary content */}
           <div className="bg-[#252422] rounded-[8px] py-3">
              {/* div for product total */}
              <div className="flex justify-between p-[10px]">
-                  <h3 className="text-white text-[18px]">Product Total{(cart.length)}</h3>
-                  <p className="text-[#B67B0F] text-[18px]">&#8358; 20,000</p>
+                  <h3 className="text-white text-[18px]">Product Total({(cart.length)})</h3>
+                  <p className="text-[#B67B0F] text-[18px]">&#8358; {totalPrice}</p>
                 </div>
                   {/* div for vat */}
                   <div className="flex justify-between p-[10px]">
                   <h3 className="text-white text-[18px]">VAT</h3>
-                  <p className="text-[#B67B0F] text-[18px]">&#8358; 1,000</p>
+                  <p className="text-[#B67B0F] text-[18px]">&#8358; 1000</p>
                 </div>
                 {/* div for delivery */}
                 <div className="flex justify-between border-b-[2px] border-b-white p-[10px]">
@@ -113,7 +115,7 @@ const Cart = ({ cart, setCart }) => {
                 {/* div for total */}
                 <div className="flex justify-between">
                   <h3 className="text-white text-[18px] p-[10px]">Total</h3>
-                  <p className="text-[#B67B0F] text-[18px]">&#8358; 22,500</p>
+                  <p className="text-[#B67B0F] text-[18px]">&#8358; {(totalPrice + 2500).toLocaleString()}</p>
                 </div>
 
           </div>

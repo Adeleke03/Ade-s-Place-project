@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import { useParams } from "react-router-dom";
 import {  burgers,
   combos,
@@ -6,8 +6,10 @@ import {  burgers,
   chickens,
   chips,
   salads,  } from "../product";
+import CartContext from '../context/CartContext';
 
 const ProductDetails = () => {
+  const {handleAddToCart} = useContext(CartContext)
   const [selectedCategorys, setSelectedCategory] = useState([
     burgers, 
     combos, 
@@ -33,6 +35,10 @@ const ProductDetails = () => {
                     <h1 className='text-3xl font-bold mb-4'>{products.title}</h1>
                     <p className='text-gray-300'>{products.description}</p>
                 </div>
+                 {/* Add to Cart Div */}
+    <div className="card-actions justify-end">
+      <button className=" bg-[#B67B0F] leading-[100%] w-full rounded-[31px] lg:whitespace-nowrap py-[15px] px-[56px] md:text-base" onClick={() => {handleAddToCart(products), toast('An item added to Cart')}}>Add to Cart</button>
+    </div>
 
         </section>
          {/* Related Products */}

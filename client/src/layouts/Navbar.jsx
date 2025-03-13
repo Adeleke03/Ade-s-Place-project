@@ -1,13 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import navLogo from "../assets/nav-logo.svg";
+import navLogo from "/nav-logo.svg";
 import cartIcon from "../assets/cart-icon.svg";
 import LocationDropDownFN from "../utils/Dropdown";
 import SignInOut from "../auth/SignInOut";
 import Searchbar from "../utils/Searchbar";
 import Cart from "../pages/Cart"
+import CartContext from "../context/CartContext";
 
-const Navbar = ({cart}) => {
+const Navbar = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(!false);
+  const {cart} = useContext(CartContext)
+
   return (
     <main>
       <header className="bg-[#100101]">
@@ -41,7 +45,13 @@ const Navbar = ({cart}) => {
                 </Link>
 
               {/* Login Button */}
-              <li>{<SignInOut />}</li>
+              
+              <li>
+                {isLoggedIn ? "Hi Eggys" : <Link>
+              {<SignInOut />}
+              </Link> }
+              
+                </li>
             </ul>
           </div>
         </nav>

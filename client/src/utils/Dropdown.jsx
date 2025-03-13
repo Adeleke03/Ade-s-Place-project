@@ -30,7 +30,7 @@ const LocationDropDownFN = () => {
               src={locationIcon}
               alt="location icon"
             />
-            <h4 className="text-[#F0F0F0] text-[13px] md:text-[12px] font-[500]">
+            <h4 className="text-[#F0F0F0] text-[13px] hidden lg:inline-block md:text-[12px] font-[500]">
               {selectedLocation}
             </h4>
             <div role="button" className="bg-transparent m-1" tabIndex={0}>

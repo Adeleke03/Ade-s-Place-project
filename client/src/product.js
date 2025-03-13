@@ -11,7 +11,7 @@ export const burgers = [
     ratingicon:
       "https://res.cloudinary.com/diww44oar/image/upload/v1741230955/star-icon_bvqi9b.svg",
     rating: "5.0",
-    price: "10,000",
+    price: "10000",
     duration: "15-20mins",
   },
   {
@@ -25,7 +25,7 @@ export const burgers = [
     ratingicon:
       "https://res.cloudinary.com/diww44oar/image/upload/v1741230955/star-icon_bvqi9b.svg",
     rating: "5.0",
-    price: "10,000",
+    price: "10000",
     duration: "15-20mins",
   },
   {
@@ -39,7 +39,7 @@ export const burgers = [
     ratingicon:
       "https://res.cloudinary.com/diww44oar/image/upload/v1741230955/star-icon_bvqi9b.svg",
     rating: "5.0",
-    price: "10,000",
+    price: "10000",
     duration: "15-20mins",
   },
   {
@@ -53,7 +53,7 @@ export const burgers = [
     ratingicon:
       "https://res.cloudinary.com/diww44oar/image/upload/v1741230955/star-icon_bvqi9b.svg",
     rating: "5.0",
-    price: "10,000",
+    price: "10000",
     duration: "15-20mins",
   },
   
@@ -68,7 +68,7 @@ export const burgers = [
     ratingicon:
       "https://res.cloudinary.com/diww44oar/image/upload/v1741230955/star-icon_bvqi9b.svg",
     rating: "5.0",
-    price: "10,000",
+    price: "10000",
     duration: "15-20mins",
   },
   {
@@ -82,7 +82,7 @@ export const burgers = [
     ratingicon:
       "https://res.cloudinary.com/diww44oar/image/upload/v1741230955/star-icon_bvqi9b.svg",
     rating: "5.0",
-    price: "10,000",
+    price: "10000",
     duration: "15-20mins",
   },
   {
@@ -96,7 +96,7 @@ export const burgers = [
     ratingicon:
       "https://res.cloudinary.com/diww44oar/image/upload/v1741230955/star-icon_bvqi9b.svg",
     rating: "5.0",
-    price: "10,000",
+    price: "10000",
     duration: "15-20mins",
   },
   {
@@ -110,7 +110,7 @@ export const burgers = [
     ratingicon:
       "https://res.cloudinary.com/diww44oar/image/upload/v1741230955/star-icon_bvqi9b.svg",
     rating: "5.0",
-    price: "10,000",
+    price: "10000",
     duration: "15-20mins",
   },
   {
@@ -124,7 +124,7 @@ export const burgers = [
     ratingicon:
       "https://res.cloudinary.com/diww44oar/image/upload/v1741230955/star-icon_bvqi9b.svg",
     rating: "5.0",
-    price: "10,000",
+    price: "10000",
     duration: "15-20mins",
   },
 ];
@@ -141,7 +141,7 @@ export const combos = [
     ratingicon:
       "https://res.cloudinary.com/diww44oar/image/upload/v1741230955/star-icon_bvqi9b.svg",
     rating: "5.0",
-    price: "15,000",
+    price: "15000",
     duration: "15-20mins",
   },
 
@@ -156,7 +156,7 @@ export const combos = [
     ratingicon:
       "https://res.cloudinary.com/diww44oar/image/upload/v1741230955/star-icon_bvqi9b.svg",
     rating: "5.0",
-    price: "15,000",
+    price: "15000",
     duration: "15-20mins",
   },
 
@@ -171,7 +171,7 @@ export const combos = [
     ratingicon:
       "https://res.cloudinary.com/diww44oar/image/upload/v1741230955/star-icon_bvqi9b.svg",
     rating: "5.0",
-    price: "15,000",
+    price: "15000",
     duration: "15-20mins",
   },
   {
@@ -185,7 +185,7 @@ export const combos = [
     ratingicon:
       "https://res.cloudinary.com/diww44oar/image/upload/v1741230955/star-icon_bvqi9b.svg",
     rating: "5.0",
-    price: "15,000",
+    price: "15000",
     duration: "15-20mins",
   },
 ];
@@ -202,7 +202,7 @@ export const chickens = [
     ratingicon:
       "https://res.cloudinary.com/diww44oar/image/upload/v1741230955/star-icon_bvqi9b.svg",
     rating: "5.0",
-    price: "15,000",
+    price: "15000",
     duration: "15-20mins",
   },
   {
@@ -216,7 +216,7 @@ export const chickens = [
     ratingicon:
       "https://res.cloudinary.com/diww44oar/image/upload/v1741230955/star-icon_bvqi9b.svg",
     rating: "5.0",
-    price: "15,000",
+    price: "15000",
     duration: "15-20mins",
   },
   {
@@ -230,7 +230,7 @@ export const chickens = [
     ratingicon:
       "https://res.cloudinary.com/diww44oar/image/upload/v1741230955/star-icon_bvqi9b.svg",
     rating: "5.0",
-    price: "15,000",
+    price: "15000",
     duration: "15-20mins",
   },
   {
@@ -244,7 +244,7 @@ export const chickens = [
     ratingicon:
       "https://res.cloudinary.com/diww44oar/image/upload/v1741230955/star-icon_bvqi9b.svg",
     rating: "5.0",
-    price: "15,000",
+    price: "15000",
     duration: "15-20mins",
   },
 ];
@@ -261,7 +261,7 @@ export const drinks = [
     ratingicon:
       "https://res.cloudinary.com/diww44oar/image/upload/v1741230955/star-icon_bvqi9b.svg",
     rating: "5.0",
-    price: "15,000",
+    price: "15000",
     duration: "15-20mins",
   },
   {
@@ -275,7 +275,7 @@ export const drinks = [
     ratingicon:
       "https://res.cloudinary.com/diww44oar/image/upload/v1741230955/star-icon_bvqi9b.svg",
     rating: "5.0",
-    price: "15,000",
+    price: "15000",
     duration: "15-20mins",
   },
   {
@@ -289,7 +289,7 @@ export const drinks = [
     ratingicon:
       "https://res.cloudinary.com/diww44oar/image/upload/v1741230955/star-icon_bvqi9b.svg",
     rating: "5.0",
-    price: "15,000",
+    price: "15000",
     duration: "15-20mins",
   },
 
@@ -304,7 +304,7 @@ export const drinks = [
     ratingicon:
       "https://res.cloudinary.com/diww44oar/image/upload/v1741230955/star-icon_bvqi9b.svg",
     rating: "5.0",
-    price: "15,000",
+    price: "15000",
     duration: "15-20mins",
   },
   
@@ -322,7 +322,7 @@ export const chips = [
     ratingicon:
       "https://res.cloudinary.com/diww44oar/image/upload/v1741230955/star-icon_bvqi9b.svg",
     rating: "5.0",
-    price: "15,000",
+    price: "15000",
     duration: "15-20mins",
   },
   {
@@ -336,7 +336,7 @@ export const chips = [
     ratingicon:
       "https://res.cloudinary.com/diww44oar/image/upload/v1741230955/star-icon_bvqi9b.svg",
     rating: "5.0",
-    price: "15,000",
+    price: "15000",
     duration: "15-20mins",
   },
   {
@@ -350,7 +350,7 @@ export const chips = [
     ratingicon:
       "https://res.cloudinary.com/diww44oar/image/upload/v1741230955/star-icon_bvqi9b.svg",
     rating: "5.0",
-    price: "15,000",
+    price: "15000",
     duration: "15-20mins",
   },
   {
@@ -364,7 +364,7 @@ export const chips = [
     ratingicon:
       "https://res.cloudinary.com/diww44oar/image/upload/v1741230955/star-icon_bvqi9b.svg",
     rating: "5.0",
-    price: "15,000",
+    price: "15000",
     duration: "15-20mins",
   },
 ];
@@ -380,7 +380,7 @@ export const salads = [
     ratingicon:
       "https://res.cloudinary.com/diww44oar/image/upload/v1741230955/star-icon_bvqi9b.svg",
     rating: "5.0",
-    price: "10,000",
+    price: "10000",
     duration: "15-20mins",
   },
   {
@@ -393,7 +393,7 @@ export const salads = [
     ratingicon:
       "https://res.cloudinary.com/diww44oar/image/upload/v1741230955/star-icon_bvqi9b.svg",
     rating: "5.0",
-    price: "10.000",
+    price: "10000",
     duration: "15-20min",
   },
   {
@@ -406,7 +406,7 @@ export const salads = [
     ratingicon:
       "https://res.cloudinary.com/diww44oar/image/upload/v1741230955/star-icon_bvqi9b.svg",
     rating: "5.0",
-    price: "10,000",
+    price: "10000",
     duration: "15-20mins",
   },
   {
@@ -419,7 +419,7 @@ export const salads = [
     ratingicon:
       "https://res.cloudinary.com/diww44oar/image/upload/v1741230955/star-icon_bvqi9b.svg",
     rating: "5.0",
-    price: "10,000",
+    price: "10000",
     duration: "15-20mins",
   },
 ];

@@ -13,35 +13,35 @@ import Hero from "./layouts/Hero";
 import Cart from "./pages/Cart";
 import ProductDetails from "./pages/ProductDetails";
 
-const cartItemsFromLocalStorage = JSON.parse(localStorage.getItem('cart')) || []
+// const cartItemsFromLocalStorage = JSON.parse(localStorage.getItem('cart')) || []
 
 function App() {
-  const [cart, setCart] = useState(cartItemsFromLocalStorage);
-  useEffect(()=>{
-    localStorage.setItem('cart',JSON.stringify(cart))
+  // const [cart, setCart] = useState(cartItemsFromLocalStorage);
+  // useEffect(()=>{
+  //   localStorage.setItem('cart',JSON.stringify(cart))
 
-  },[cart])
-  console.log(cart);
+  // },[cart])
+  // console.log(cart);
   
-  let handleAddToCart = (product) => {
-    const productSelected = cart.find(
-      (singleCart) => singleCart._id === product._id
-    );
-    if (productSelected) {
-      setCart(
-        cart.map((oneItem) =>
-          oneItem._id === product._id
-            ? {
-                ...productSelected,
-                quantity: productSelected.quantity + 1,
-              }
-            : oneItem
-        )
-      );
-    } else {
-      setCart([...cart, { ...product, quantity: 1 }]);
-    }    
-  };
+  // let handleAddToCart = (product) => {
+  //   const productSelected = cart.find(
+  //     (singleCart) => singleCart._id === product._id
+  //   );
+  //   if (productSelected) {
+  //     setCart(
+  //       cart.map((oneItem) =>
+  //         oneItem._id === product._id
+  //           ? {
+  //               ...productSelected,
+  //               quantity: productSelected.quantity + 1,
+  //             }
+  //           : oneItem
+  //       )
+  //     );
+  //   } else {
+  //     setCart([...cart, { ...product, quantity: 1 }]);
+  //   }    
+  // };
   return (
     <>
       <BrowserRouter>
@@ -52,12 +52,16 @@ function App() {
             </div>
           }
         >
-          <Navbar cart={cart} />
+          {/* <Navbar cart={cart} /> */}
+          <Navbar  />
           {/* <Hero/> */}
           <Routes>
-            <Route path="/" element={<Home handleAddToCart = {handleAddToCart} />} />
+            <Route path="/" element={<Home />} />
             <Route path="/products/:id"  element={<ProductDetails  />} />
-            <Route path="Cart" element={<Cart cart={cart} setCart={setCart} />}/>
+            <Route path="Cart" element={<Cart  />}/>
+            {/* <Route path="/" element={<Home handleAddToCart = {handleAddToCart} />} />
+            <Route path="/products/:id"  element={<ProductDetails  />} />
+            <Route path="Cart" element={<Cart cart={cart} setCart={setCart} />}/> */}
           </Routes>
           <Footer />
         </Suspense>

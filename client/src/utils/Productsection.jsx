@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import {Link} from "react-router-dom";
 import {
@@ -13,10 +13,12 @@ import {
  
 } from "../product";
 import {  toast } from 'sonner';
+import CartContext  from "../context/CartContext";
 
 
-const Productsection = ({handleAddToCart}) => {
+const Productsection = () => {
   const [selectedCategorys, setSelectedCategory] = useState(burgers);
+  const {handleAddToCart} = useContext(CartContext)
   return (
     <>
       <main className="">
