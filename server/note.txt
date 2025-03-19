@@ -1,0 +1,12 @@
+project setup
+
+-- initialize, npm init -y
+-- setup express server 
+- index.js -- where you setup your express server 
+-- folder structures
+- riutes
+- controllers
+- models
+- middlewares
+- utils 
+- config

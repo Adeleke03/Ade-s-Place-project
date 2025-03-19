@@ -12,6 +12,7 @@ import LoadingRing from "./utils/Loader";
 import Hero from "./layouts/Hero";
 import Cart from "./pages/Cart";
 import ProductDetails from "./pages/ProductDetails";
+import Checkout from "./pages/Checkout";
 
 // const cartItemsFromLocalStorage = JSON.parse(localStorage.getItem('cart')) || []
 
@@ -59,6 +60,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/products/:id"  element={<ProductDetails  />} />
             <Route path="Cart" element={<Cart  />}/>
+            <Route path="Cart/Checkout" element={<Checkout/>} />
             {/* <Route path="/" element={<Home handleAddToCart = {handleAddToCart} />} />
             <Route path="/products/:id"  element={<ProductDetails  />} />
             <Route path="Cart" element={<Cart cart={cart} setCart={setCart} />}/> */}

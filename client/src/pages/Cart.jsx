@@ -1,7 +1,9 @@
 import React, {useContext} from 'react'
+import { Link } from "react-router-dom";
 import { burgers, combos, drinks, chickens, chips, salads } from "../product";
 import Vectordelete from "../assets/Vector.png";
 import CartContext from '../context/CartContext';
+import Checkout from "./Checkout";
 
 const Cart = () => {
   const {cart, setCart} = useContext(CartContext)
@@ -39,7 +41,7 @@ const Cart = () => {
       {/* section for  cart  */}
       <section className='text-white wrapper grid lg:grid-cols-3 gap-[20px] '>
         {/* div for  cart  */}
-        <div className='lg:col-span-2 bg-black rounded-[8px] py-3 p-[15px]' >
+        <div className='lg:col-span-2 h-fit bg-black rounded-[8px] py-3 p-[15px]' >
         <h1 className="text-white border-b-[1px] border-b-white text-[24px] leading-[100%] p-[7px] ">Cart</h1>
         <div className=' flex flex-col gap-[25px] py-3'>
           {cart.map((cartItem) => {const {
@@ -120,11 +122,13 @@ const Cart = () => {
 
           </div>
             {/* div for button */}
+            <Link to="Checkout">
             <div className="py-4">
                 <button className=" bg-[#B67B0F] leading-[100%] w-full rounded-[31px] lg:whitespace-nowrap py-[15px] px-[56px] md:text-base text-white">
                   Check Out
                 </button>
               </div>
+            </Link>
                   </div>
 
       </section>

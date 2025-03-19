@@ -7,9 +7,19 @@ import SignInOut from "../auth/SignInOut";
 import Searchbar from "../utils/Searchbar";
 import Cart from "../pages/Cart"
 import CartContext from "../context/CartContext";
+import SearchIcon from "../assets/search.svg";
+import dropDrownIcon from "../assets/dropdown-icon.svg";
+import HelloIcon from '../assets/helloicon.png';
+import MailIcon from "../assets/mailicon.png";
+import OrderIcon from "../assets/OrdersIcon.png";
+import DashboardIcon from "../assets/dashboardicon.png";
+import LogoutIcon from "../assets/LogoutIcon.png";
 
+
+// const Navbar = ({cart, setIsCart}) => {
 const Navbar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(!false);
+  // const [isDropdown, setIsDropDown] = useState(false)
   const {cart} = useContext(CartContext)
 
   return (
@@ -25,7 +35,7 @@ const Navbar = () => {
                 alt="Eggy's palace logo"
               />
             </Link>
-            <div>{<LocationDropDownFN />}</div>
+            <div className=" flex items-center">{<LocationDropDownFN />}  </div>
           </div>
 
           {/* Search Bar */}
@@ -36,7 +46,7 @@ const Navbar = () => {
             {/* <h2 className="font-[500] text-[13px] text-[#FBFBFB] hidden md:block">
               All Products
             </h2> */}
-            <ul className="flex gap-[28px]">
+            <ul className="flex gap-[28px] items-center text-white">
                 <Link to="Cart">
               <li className="flex gap-2 bg-[#B67B0F] md:rounded-[32px] rounded-full py-[15px] px-[20px] md:w-[142px] w-[80px] h-[50px]">
                 <img src={cartIcon} alt="cartLogo" />
@@ -47,7 +57,16 @@ const Navbar = () => {
               {/* Login Button */}
               
               <li>
-                {isLoggedIn ? "Hi Eggys" : <Link>
+                {isLoggedIn ?  <div className="dropdown dropdown-center  ">
+  <div tabIndex={0} role="button" className="flex  m-1 bg-black border-none text-white "><img src={HelloIcon} alt="" /><span> Hi, Eggys</span><img src={dropDrownIcon} alt="" /></div>
+  <ul tabIndex={0} className="dropdown-content menu bg-[#252422] leading-[100%] rounded-box z-1 w-[243px] h-fit rounded-[7px] p-[8px] gap-[24px] shadow-sm">
+    <li className="hidden lg:inline-block"><a><img src={DashboardIcon} alt="" /> Dashboard</a></li>
+    <li><a><img src={HelloIcon} alt="" /> My Account</a></li>
+    <li><a><img src={OrderIcon} alt="" />Orders</a></li>
+    <li><a><img src={MailIcon} alt="" className="w-6 h-7" /> Inbox</a></li>
+    <li className="text-[#FF0000]"><a><img src={LogoutIcon} alt="" />Log Out</a></li>
+  </ul>
+</div>   : <Link>
               {<SignInOut />}
               </Link> }
               

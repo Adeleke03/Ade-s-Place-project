@@ -61,7 +61,7 @@ const SignInOut = () => {
                         {/* <form  method="dialog"> */}
                          {/* logo div for sign up section */}
         <div className="flex justify-center py-8">
-                <img className="h-[127.8px]" src={navLogo} alt="Nav logo" />
+                <img className="lg:h-[127.8px]" src={navLogo} alt="Nav logo" />
               </div>
           <h3 className="text-white text-[32px] leading-[100%] py-1.5">{isSignUp ? "Create Account" : "Welcome Back" }</h3>
           <h4 className="text-white text-base">{isSignUp ? "Lets get you started so you can start joining and creating events" : "Sign In to Your Account"}</h4>
